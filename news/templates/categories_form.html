@@ -8,7 +8,9 @@
     {% csrf_token %}
     <label for="id_name">Nome</label>
     {{ form.as_p}}
+    <div class="button">
     <button type="submit">Salvar</button>
+    </div>
   </form>
   </div>
 {% endblock %}
