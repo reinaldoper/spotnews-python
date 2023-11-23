@@ -12,6 +12,7 @@
       {% if new.image %}
         <img src="{% static new.image %}" alt="Imagens" />
       {% endif %}
+      <a href="{% url 'news-details-page' new.id %}">Details</a>
     </div>
   {% endfor %}
 </div>
