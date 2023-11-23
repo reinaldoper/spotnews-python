@@ -1,0 +1,14 @@
+{% extends 'base.html' %} 
+{% block title %}
+  Formulário para Nova Categoria
+{% endblock %}
+{% block content %}
+  <div class="news-form">
+  <form method="post" action="{% url 'categories-form' %}" class="categories-form">
+    {% csrf_token %}
+    <label for="id_name">Nome</label>
+    {{ form.as_p}}
+    <button type="submit">Salvar</button>
+  </form>
+  </div>
+{% endblock %}
