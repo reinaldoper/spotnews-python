@@ -140,13 +140,20 @@ DATE_FORMAT = "d/m/Y"
 MEDIA_URL = "/img/"
 MEDIA_ROOT = BASE_DIR / "static"
 
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+
+""" STATICFILES_DIRS = [
+  str(BASE_DIR / 'static/'),
+] """
+
+
 if "test" in sys.argv or "pytest" in sys.argv:
     MEDIA_URL = ""
     MEDIA_ROOT = BASE_DIR / "tests"
     STORAGE = {"default": "django.core.files.storage.FileSystemStorage"}
 
 STATICFILES_DIRS = [
-    BASE_DIR / "static/img",
+  str(BASE_DIR / 'static/'),
 ]
 
 STATIC_TEST_DIR = os.path.join(BASE_DIR, "tests")
@@ -156,3 +163,5 @@ REST_FRAMEWORK = {
 }
 
 WHITE_NOISE_AUTOREFRESH = True
+
+DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
